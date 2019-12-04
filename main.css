@@ -1,0 +1,14 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    }
+
+.highlight {
+  background-color: yellow;
+}
+
+img {
+  max-width: 190px;
+  max-height: 190px;
+  vertical-align: middle;
+}

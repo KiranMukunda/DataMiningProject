@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <title>Search</title>
+    <script>
+        function clear() {
+            var el = document.getElementById(id);
+            if (el) {
+                el.innerHTML = '';
+            }
+        }
+    </script>
+    <script type="text/javascript">
+  window.onload = function () {
+    var chart = new CanvasJS.Chart("chartContainer",
+    {
+      title: {
+        text: "Hotel Star Classification"
+      },
+      axisY:{
+        valueFormatString:  "##.####"
+     },
+      data: [
+      {
+        type: "column",
+        dataPoints: [
+        {% for key, value in result.items() %}
+                   {y: {{ value }}, label: "{{ key }}"},
+                {% endfor %}
+        ]
+      }
+      ]
+    });
+
+    chart.render();
+  }
+  </script>
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</head>
+<body>
+    <center>
+    <h1>Classifier</h1>
+    </center>
+    <form method="POST" action="/home" style="text-align:left">
+        <input type="submit" name="Home" value="Home">
+    </form>
+    <form method="POST" action="/classify" style="text-align:center">
+        Classify text : <input type="text" name="Classify text" />
+        <input type="submit" name="classify" value="classify">
+    </form>
+    <center>
+    <p style="text-align:center" >Results for search string - <mark>{{ text }}</mark> </p>
+    <div id="chartContainer" style="height: 40%; width: 40%;">
+  </div>
+  </center>
+</body>
+</html>

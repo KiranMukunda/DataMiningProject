@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <title>Search</title>
+    <script src="static/mark.js"></script>
+    <script>
+        function clear() {
+            var el = document.getElementById(id);
+            if (el) {
+                el.innerHTML = '';
+            }
+        }
+    </script>
+</head>
+<body>
+<h1 style="text-align:center">Search Hotels</h1>
+    <form method="POST" action="/home" style="text-align:left">
+        <input type="submit" name="Home" value="Home">
+    </form>
+	<form method="POST" action="/search" style="text-align:center">
+		Enter text : <input type="text" name="Search text" />
+		<input type="submit" name="submit" value="search">
+        <input type="submit" name="clear" value="clear">
+	</form>
+<p style="text-align:center" >Results for search string - <mark>{{ text }}</mark> </p>
+<p style="text-align:center"> Total number of results - <bold> {{ total_result }}</bold></p>
+<div class="context">
+    {% for key, value in result.items() %}
+        <h2> {{ key }} </h2>
+    <p>TF-IDF Calculations</p>
+        <p> {{ tfidf_display[key] }} </p>
+        <p> {{ tf_idf_full[hotel_key[key]] }}</p>
+        <p> {{ tf_idf[hotel_key[key]] }}</p>
+<p id="para"> <blockquote> {{ value }} </blockquote> </p>
+    {% endfor %}
+    </div>
+<script>
+var instance = new Mark(document.querySelector("div.context"))
+instance.mark("{{ text }}")
+</script>
+</body>
+</html>

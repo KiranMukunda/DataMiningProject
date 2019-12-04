@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Recognition System</title>
+    <script src="static/mark.js"></script>
+</head>
+<body>
+<h1 style="text-align:center">Image Recognition System</h1>
+<form method="POST" action="/home" style="text-align:left">
+        <input type="submit" name="Home" value="Home">
+    </form>
+	<form method="POST" action="/image" style="text-align:center">
+		Enter text : <input type="text" name="Search text" />
+        <input type="submit" name="Search" value="Image Search">
+        <input type="submit" name="Clear" value="Clear">
+    </form>
+
+    <center><p style="text-align:center" >Results for search string - <mark>{{ text }}</mark> </p></center>
+    <p style="text-align:center"> Total number of results - <bold> {{ total_result }}</bold></p><br></br>
+    <div class="context">
+        {% for key, value in image_file_dict.items() %}
+        <center><p>{{ captions_display[key] }}</p>
+            <p>TF-IDF Calculations</p>
+        <p> {{ tfidf_display[key] }}</p></center>
+<img src="{{ value }}" alt="User Image" style="display: block; margin-left: auto; margin-right: auto; width:20%; height:20%"><br></br>
+    {% endfor %}
+    </div>
+<script>
+var instance = new Mark(document.querySelector("div.context"))
+instance.mark("{{ text }}")
+</script>
+</body>
+</html>
