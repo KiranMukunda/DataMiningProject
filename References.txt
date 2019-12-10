@@ -1,0 +1,9 @@
+https://towardsdatascience.com/tfidf-for-piece-of-text-in-python-43feccaa74f8
+https://www.geeksforgeeks.org/removing-stop-words-nltk-python/
+https://stackoverflow.com/questions/1746501/can-someone-give-an-example-of-cosine-similarity-in-a-very-simple-graphical-wa
+https://www.guru99.com/wordnet-nltk.html
+https://stackoverflow.com/questions/8644428/how-to-highlight-text-using-javascript
+https://blog.ruanbekker.com/blog/2017/12/14/graphing-pretty-charts-with-python-flask-and-chartjs/
+https://scikit-learn.org/stable/modules/generated/sklearn.metrics.mean_squared_error.html
+https://machinelearningmastery.com/naive-bayes-for-machine-learning/
+https://ncu.libguides.com/researchprocess/proximity
