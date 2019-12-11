@@ -334,7 +334,7 @@ def classify():
     return render_template('classifier.html', result=search_result_classify, text=text)
     
     
-For calculating the tf idf for theimage recognition system ihave used the phase 1 code lines
+For calculating the tf idf for the image recognition system i have used the phase 1 code lines
 ```
     if request.method == 'POST':
         text = request.form['Search text']
