@@ -387,6 +387,19 @@ from nltk.corpus import wordnet
      
 ```
 
+For getting the image captioning we have used the below code lines
+```
+with open('image.csv','w') as csvFile:
+	writer = csv.writer(csvFile)
+	for i in range(990):
+		image_url='https://raw.githubusercontent.com/KiranMukunda/DataMining/master/'+str(i)+'.jpg'
+		image_extension = image_url[-4:]
+		image_path = tf.keras.utils.get_file(('new'+str(i))+image_extension,origin=image_url)
+		result, attention_plot = evaluate(image_path)
+		writer.writerows([str(i),image_url,result]])
+csvFile.close()
+```
+
 For calculating the tf idf for the image recognition system i have used the phase 1 code lines
 ```
     if request.method == 'POST':
