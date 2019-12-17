@@ -333,7 +333,42 @@ def classify():
     text = str(text).replace("[", "")
     text = str(text).replace("]", "")
     return render_template('classifier.html', result=search_result_classify, text=text) 
+  ```
   
+	   
+For classification experiments the following code lines have been used
+We need to calculate the accuracy of various models
+Have used libraries for calculating the accuraies of various models and used prediction methods.
+
+```
+# vid = pandas.read_csv("data.csv")
+    # x_train, x_test, y_train, y_test= train_test_split(vid['hotel_description'], vid['hotel_star_rating'], test_size=0.20, random_state=1, shuffle=False)
+    # count_vector = CountVectorizer(strip_accents='ascii', token_pattern=u'(?ui)\\b\\w*[a-z]+\\w*\\b',lowercase=True, stop_words='english')
+    # x_train_cv = count_vector.fit_transform(x_train.values.astype('U'))
+    # x_test_cv = count_vector.transform(x_test.values.astype('U'))
+    # nb=MultinomialNB(alpha=1)
+    # nb.fit(x_train_cv, y_train)
+    # predictions= nb.predict(x_test_cv)
+    # # rms = sklearn.metrics.mean_squared_error(y_test, predictions)
+    # # print("rms: ", rms)
+    #
+    # SVM = svm.SVC(C=1.0,kernel='linear',degree=3,gamma='auto')
+    # SVM.fit(x_train_cv,y_train)
+    # predictions_svm=SVM.predict(x_test_cv)
+    #
+    # kdt = KNeighborsClassifier(n_neighbors=3)
+    # kdt.fit(x_train_cv,y_train)
+    # predictions_knn = kdt.predict(x_test_cv)
+    #
+    # clf = DecisionTreeClassifier()
+    # clf = clf.fit(x_train_cv, y_train)
+    # y_pred = clf.predict(x_test_cv)
+    #
+    # print('accuracy of naive: ', (accuracy_score(y_test, predictions))*100)
+    # print('accuracy of svm:', (accuracy_score(y_test, predictions_svm))*100)
+    # print('accuracy of knn:', (accuracy_score(y_test, predictions_knn)) * 100)
+    # print('accuracy of decision tree:', (accuracy_score(y_test, y_pred)) * 100)
+```
 
 For calculating the tf idf for the image recognition system i have used the phase 1 code lines
 ```
@@ -380,40 +415,6 @@ For calculating the tf idf for the image recognition system i have used the phas
             tf_idf_full.clear()
             term_freq.clear()
             string =""
-	   
-	   
-For classification experiments the following code lines have been used
-We need to calculate the accuracy of various models
-Have used libraries for calculating the accuraies of various models and used prediction methods.
-
-```
-# vid = pandas.read_csv("data.csv")
-    # x_train, x_test, y_train, y_test= train_test_split(vid['hotel_description'], vid['hotel_star_rating'], test_size=0.20, random_state=1, shuffle=False)
-    # count_vector = CountVectorizer(strip_accents='ascii', token_pattern=u'(?ui)\\b\\w*[a-z]+\\w*\\b',lowercase=True, stop_words='english')
-    # x_train_cv = count_vector.fit_transform(x_train.values.astype('U'))
-    # x_test_cv = count_vector.transform(x_test.values.astype('U'))
-    # nb=MultinomialNB(alpha=1)
-    # nb.fit(x_train_cv, y_train)
-    # predictions= nb.predict(x_test_cv)
-    # # rms = sklearn.metrics.mean_squared_error(y_test, predictions)
-    # # print("rms: ", rms)
-    #
-    # SVM = svm.SVC(C=1.0,kernel='linear',degree=3,gamma='auto')
-    # SVM.fit(x_train_cv,y_train)
-    # predictions_svm=SVM.predict(x_test_cv)
-    #
-    # kdt = KNeighborsClassifier(n_neighbors=3)
-    # kdt.fit(x_train_cv,y_train)
-    # predictions_knn = kdt.predict(x_test_cv)
-    #
-    # clf = DecisionTreeClassifier()
-    # clf = clf.fit(x_train_cv, y_train)
-    # y_pred = clf.predict(x_test_cv)
-    #
-    # print('accuracy of naive: ', (accuracy_score(y_test, predictions))*100)
-    # print('accuracy of svm:', (accuracy_score(y_test, predictions_svm))*100)
-    # print('accuracy of knn:', (accuracy_score(y_test, predictions_knn)) * 100)
-    # print('accuracy of decision tree:', (accuracy_score(y_test, y_pred)) * 100)
 ```
 
 For the Phrase search:
