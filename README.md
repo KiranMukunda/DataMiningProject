@@ -370,6 +370,23 @@ Have used libraries for calculating the accuraies of various models and used pre
     # print('accuracy of decision tree:', (accuracy_score(y_test, y_pred)) * 100)
 ```
 
+
+Image recodnition system:
+For pre processing we have used the below code lines:
+
+```
+import os
+
+from nltk.corpus import wordnet
+
+ path= "C:/Users/kiran_000/Desktop/MS/Data Mining/Actual Project/Images/2k_images/"
+ files= os.listdir(path)
+
+ for i,file in enumerate(files):
+     os.rename(os.path.join(path, file), os.path.join(path, ''.join([str(i), '.jpg'])))
+     
+```
+
 For calculating the tf idf for the image recognition system i have used the phase 1 code lines
 ```
     if request.method == 'POST':
