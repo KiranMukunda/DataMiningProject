@@ -143,6 +143,7 @@ We are using lemmetization so that the search results are better
 																
 On the click of search we are using the POST method and calculating the tf-idf and ranking the results. We use render template to 
 display the results from python on the HTML page 
+
 ```
 @app.route("/search", methods=['POST', 'GET'])
 def search():
@@ -331,9 +332,9 @@ def classify():
     text = str(string).replace("'", "")
     text = str(text).replace("[", "")
     text = str(text).replace("]", "")
-    return render_template('classifier.html', result=search_result_classify, text=text)
-    
-    
+    return render_template('classifier.html', result=search_result_classify, text=text) 
+  
+
 For calculating the tf idf for the image recognition system i have used the phase 1 code lines
 ```
     if request.method == 'POST':
@@ -379,7 +380,7 @@ For calculating the tf idf for the image recognition system i have used the phas
             tf_idf_full.clear()
             term_freq.clear()
             string =""
-
+	    
 For the Phrase search:
 Algorithm code lines:
 ```
