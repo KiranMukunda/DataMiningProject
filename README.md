@@ -197,7 +197,9 @@ def search():
 
 
 Hotel Classifier
-Here i have used Naive bayes theorem for classification. so in this we would need to claculate the conditional probabilities given the hypothesis.
+Here i have used Naive bayes theorem for classification. So in this we would need to calculate the conditional probabilities given the hypothesis.
+After calculating the accuracies i have found that Naive bayes works the best for my dataset so have implemented Naive bayes classifier from sratch.
+
 ```
 def classify():
     global class1count,class2count,class3count,class4count,class5count
