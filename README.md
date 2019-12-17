@@ -123,8 +123,6 @@ On the opening of the webpage
 def index():
     readfile()
     return render_template('index.html', result=search_result, tfidf_display=tfidf_display, text=text)
-```
-
 
 We are using lemmetization so that the search results are better
 ```
