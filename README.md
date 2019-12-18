@@ -373,7 +373,7 @@ Have used libraries for calculating the accuraies of various models and used pre
 
 
 Image recodnition system:
-For pre processing we have used the below code lines:
+For pre processing we have used the below code lines to rename the files so that it can be used directly to upload and the URL can be generated easily.
 
 ```
 import os
