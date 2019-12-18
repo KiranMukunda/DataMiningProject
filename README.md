@@ -402,7 +402,7 @@ with open('image.csv','w') as csvFile:
 csvFile.close()
 ```
 
-For calculating the tf idf for the image recognition system i have used the phase 1 code lines
+For calculating the tf idf for the image recognition system i have used the phase 1 code lines. Which ranks the images based on the tf -idf scores. the main drawback of this is that the captions would be very small the ranking wouldn't be most accurate.
 ```
     if request.method == 'POST':
         text = request.form['Search text']
