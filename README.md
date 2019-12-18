@@ -65,7 +65,7 @@ nltk.download('punkt')
 nltk.download('wordnet')
 ```
 
-Read the dataset and store the data in the dictionary. Also we do preprocessing and removing the stopwords.
+Read the dataset and store the data in the dictionary. Also we do preprocessing and remove the stopwords.
 ```
 def readfile():
     global readcsv
@@ -196,7 +196,8 @@ def search():
 ```
 
 
-Hotel Classifier
+Hotel Classifier:
+
 Here i have used Naive bayes theorem for classification. So in this we would need to calculate the conditional probabilities given the hypothesis.
 After calculating the accuracies i have found that Naive bayes works the best for my dataset so have implemented Naive bayes classifier from sratch.
 
@@ -336,8 +337,8 @@ def classify():
   ```
   
 	   
-For classification experiments the following code lines have been used
-We need to calculate the accuracy of various models
+For classification experiments the following code lines have been used.
+We need to calculate the accuracy of various models.
 Have used libraries for calculating the accuraies of various models and used prediction methods.
 
 ```
@@ -387,7 +388,7 @@ from nltk.corpus import wordnet
      
 ```
 
-For getting the image captioning we have used the below code lines
+For getting the image captioning we have used the below code lines to run and get the captions. those captions have been written down to a csv file which is later used for tf idf search.
 ```
 with open('image.csv','w') as csvFile:
 	writer = csv.writer(csvFile)
