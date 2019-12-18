@@ -372,8 +372,9 @@ Have used libraries for calculating the accuraies of various models and used pre
 ```
 
 
-Image recodnition system:
-For pre processing we have used the below code lines to rename the files so that it can be used directly to upload and the URL can be generated easily.
+Image recognition system:
+
+For pre processing we have used the below code lines to rename the files so that it can be used directly to upload and the URL can be generated easily.File names have been numbered.
 
 ```
 import os
@@ -388,7 +389,7 @@ from nltk.corpus import wordnet
      
 ```
 
-For getting the image captioning we have used the below code lines to run and get the captions. those captions have been written down to a csv file which is later used for tf idf search.
+For getting the image captioning we have used the below code lines to run and get the captions. These captions have been written down to a csv file which is later used for tf idf search. This file is stored in google collab which we need to download using the download code lines.
 ```
 with open('image.csv','w') as csvFile:
 	writer = csv.writer(csvFile)
